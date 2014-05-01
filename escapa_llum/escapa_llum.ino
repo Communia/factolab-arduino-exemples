@@ -23,16 +23,16 @@ void loop()
   luz_derecha = analogRead(A5);
   if (luz_derecha > 300 && luz_izquierda > 300) {
     // Motor Derecha
-    servo_6.write(180);
+    servo_6.write(0);
     delay((0));
     // Motor Izquierda
-    servo_9.write(0);
+    servo_9.write(180);
     delay((1000));
 
   }
   if (luz_derecha > luz_izquierda) {
     // Motor derecha
-    servo_6.write(180);
+    servo_6.write(0);
     delay((0));
     // Motor Izquierda
     servo_9.write(90);
@@ -42,7 +42,7 @@ void loop()
   if (luz_izquierda > luz_derecha) {
     servo_6.write(90);
     delay((0));
-    servo_9.write(0);
+    servo_9.write(180);
     delay((100));
 
   }
